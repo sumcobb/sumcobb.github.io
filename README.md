@@ -1,3 +1,3 @@
-# summercobb.github.io
+# sumcobb.github.io
 
 My website.
