@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+    {% include head.html %}
+    {% include scripts.html %}
+
+    <body id="top">
+
+        <!-- Header -->
+        <header id="header" class="skel-layers-fixed">
+            <h1><a href="#">Summer Cobb</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="one" class="wrapper style1 align-center">
+            <header>
+                <h2>Projects</h2>
+            </header>
+
+            <div class="container">
+                <div class="row">
+
+                    <section class="feature 6u 12u$(small)">
+                        <a class="title-links"
+                            href="http://visamino.proj.cs.wwu.edu/"
+                            target="_blank">
+                            <img class="image fit" src="images/visamino.jpg"
+                                alt />
+                            <h3 class="title" id="link">"visAmino"</h3>
+                        </a>
+                        <p id="date">March 2017 - March 2018</p>
+                        <p> Expanded viewer functionality to display useful
+                            numerical data of protein mutations and
+                            visualization for user interaction with WebGL
+                            Protein Viewer API.
+                        </p>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="two" class="wrapper style1 align-center">
+            <header>
+                <h2>Posts</h2>
+            </header>
+
+            {% for post in site.posts %}
+            <section class="feature 6u 12u$(small)">
+                <h2><a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }}:
+                        {{ post.title }}</a></h2>
+                {{ post.excerpt }}
+            </section>
+            {% endfor %}
+
+        </section>
+    </body>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row double">
+                <div class="6u">
+                    <ul class="icons">
+                        <li><a href="https://github.com/sumcobb" target="_blank"
+                                class="icon  fa-github"><span
+                                    class="label">Github</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/summercobb/"
+                                target="_blank" class="icon  fa-linkedin"><span
+                                    class="label">LinkedIn</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</html>
