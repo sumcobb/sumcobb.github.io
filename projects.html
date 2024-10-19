@@ -1,0 +1,33 @@
+---
+layout: default
+title: Projects
+---
+
+<h2>Projects</h2>
+<ul>
+{% assign projects = site.projects | sort: "year" | reverse %}
+{% for proj in projects %}
+<li>
+<div class="projitem">
+
+  <div class="projtitle">
+    <h2><a href="{{ proj.url }}"><i class="fas fa-external-link-alt"></i>{{ proj.title }}</a></h2>
+  </div>
+  <div class="projinfo">
+    {{ proj.project }}, {{ proj.year}}
+  </div>
+  <!-- 
+  <div class="projlinks">
+    {% if proj.web %}
+    <a href="{{ page.web }}"><i class="fas fa-external-link-alt"></i>Web</a>&nbsp;&nbsp;
+    {% endif %}
+    {% if proj.pdf %}
+    <a href="/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i>PDF</a>&nbsp;&nbsp;
+    {% endif %}
+    <a href="{{proj.url}}"><i class="fas fa-arrow-right"></i> Project Page</a>
+  </div>
+  -->
+</div>
+</li>
+{% endfor %}
+</ul>

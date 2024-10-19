@@ -1,3 +1,3 @@
 # sumcobb.github.io
 
-My website.
+My personal website, currently a work in progress.
